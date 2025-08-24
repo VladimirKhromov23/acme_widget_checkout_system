@@ -53,7 +53,7 @@ require_relative 'lib/basket'
 require_relative 'lib/catalog'
 require_relative 'lib/discount_rules/half_price_discount'
 
-# Initialize basket with product catalogue, delivery rules, and offers
+# Initialize basket with product catalog, delivery rules, and offers
 basket = Basket.new(catalog: Catalog, discount_rules: [DiscountRules::HalfPriceDiscount.new(product_code: 'R01')])
 
 # Add method takes product code as parameter
@@ -61,7 +61,7 @@ basket.add(product_code: 'R01')
 basket.add(product_code: 'R01')
 basket.add(product_code: 'G01')
 
-# Total method returns total cost including delivery and discounts
+# Total method returns total cost including delivery and offers
 puts basket.total 
 ```
 
